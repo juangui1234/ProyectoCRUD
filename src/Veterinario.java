@@ -1,5 +1,3 @@
-package Historia;
-
 public class Veterinario {
     private String nombre;
     private String especialidad;

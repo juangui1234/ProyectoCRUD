@@ -1,5 +1,3 @@
-package Historia;
-
 public class IDGenerator {
     private static int contadorConsulta = 0;
     private static int contadorMascota = 0;

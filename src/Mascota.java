@@ -1,4 +1,3 @@
-package Historia;
 //import java.util.ArrayList;
 
 public class Mascota {
