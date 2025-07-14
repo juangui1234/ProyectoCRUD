@@ -24,34 +24,20 @@ public class VentanaPrincipal extends JFrame {
         JMenuBar menuBar = new JMenuBar();
 
         // Menú Archivo
-        JMenu menuArchivo = new JMenu("Archivo");
-
-        JMenuItem itemNuevo = new JMenuItem("Nuevo registro");
-        itemNuevo.addActionListener(e -> {
-            FormularioPaciente form = new FormularioPaciente(crudMascotas);
-            desktopPane.add(form);
-            form.setVisible(true);
-        });
-
-        JMenuItem itemSalir = new JMenuItem("Salir");
-        itemSalir.addActionListener(e -> System.exit(0));
-
-        menuArchivo.add(itemNuevo);
-        menuArchivo.addSeparator();
-        menuArchivo.add(itemSalir);
+        JMenu menuArchivo = getJMenu();
 
         // Menú Vista
         JMenu menuVista = new JMenu("Vista");
 
         JMenuItem itemPacientes = new JMenuItem("Pacientes");
-        itemPacientes.addActionListener(e -> {
+        itemPacientes.addActionListener(_ -> {
             ListaPacientes lista = new ListaPacientes(crudMascotas);
             desktopPane.add(lista);
             lista.setVisible(true);
         });
 
         JMenuItem itemConsulta = new JMenuItem("Consulta");
-        itemConsulta.addActionListener(e -> {
+        itemConsulta.addActionListener(_ -> {
             PanelConsulta panel = new PanelConsulta(crudMascotas);
             desktopPane.add(panel);
             panel.setVisible(true);
@@ -64,6 +50,25 @@ public class VentanaPrincipal extends JFrame {
         menuBar.add(menuVista);
 
         setJMenuBar(menuBar);
+    }
+
+    private JMenu getJMenu() {
+        JMenu menuArchivo = new JMenu("Archivo");
+
+        JMenuItem itemNuevo = new JMenuItem("Nuevo registro");
+        itemNuevo.addActionListener(_ -> {
+            FormularioPaciente form = new FormularioPaciente(crudMascotas);
+            desktopPane.add(form);
+            form.setVisible(true);
+        });
+
+        JMenuItem itemSalir = new JMenuItem("Salir");
+        itemSalir.addActionListener(_ -> System.exit(0));
+
+        menuArchivo.add(itemNuevo);
+        menuArchivo.addSeparator();
+        menuArchivo.add(itemSalir);
+        return menuArchivo;
     }
 
     public static void main(String[] args) {

@@ -29,9 +29,9 @@ public class Consulta {
         }
     }
 
-    public String getCodigo() {
+    /*public String getCodigo() {
         return codigo;
-    }
+    }*/
     public void setCodigo(String codigo) {
         if (codigo == null || codigo.isBlank()) {
             throw new IllegalArgumentException("Código inválido.");
@@ -39,9 +39,9 @@ public class Consulta {
         this.codigo = codigo;
     }
 
-    public LocalDate getFecha() {
+   /* public LocalDate getFecha() {
         return fecha;
-    }
+    }*/
     public void setFecha(String fechaTexto) {
         try {
             this.fecha = LocalDate.parse(fechaTexto);
@@ -50,9 +50,9 @@ public class Consulta {
         }
     }
 
-    public Veterinario getVeterinario() {
+    /*public Veterinario getVeterinario() {
         return veterinario;
-    }
+    }*/
     public void setVeterinario(Veterinario veterinario) {
         if (veterinario == null) {
             throw new IllegalArgumentException("Veterinario requerido.");

@@ -17,9 +17,9 @@ public class Veterinario {
     }
 
 
-    public String getNombre() {
+    /*public String getNombre() {
         return nombre;
-    }
+    }*/
     public void setNombre(String nombre) {
         if (nombre == null || nombre.isBlank()) {
             throw new IllegalArgumentException("El nombre del veterinario no puede estar vacío.");
@@ -27,9 +27,9 @@ public class Veterinario {
         this.nombre = nombre;
     }
 
-    public String getEspecialidad() {
+    /*public String getEspecialidad() {
         return especialidad;
-    }
+    }*/
     public void setEspecialidad(String especialidad) {
         if (especialidad == null || especialidad.isBlank()) {
             throw new IllegalArgumentException("La especialidad no puede estar vacía.");

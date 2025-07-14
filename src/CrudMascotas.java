@@ -8,11 +8,11 @@ public class CrudMascotas {
         return mascotas;
     }
 
-    public void agregarMascota(Mascota mascota) {
+   /* public void agregarMascota(Mascota mascota) {
         if (mascota != null) {
             mascotas.add(mascota);
         }
-    }
+    }*/
 
     public Mascota buscarPorNombre(String nombre) {
         for (Mascota m : mascotas) {
@@ -23,7 +23,7 @@ public class CrudMascotas {
         return null;
     }
 
-    public void limpiarMascotas() {
+   /* public void limpiarMascotas() {
         mascotas.clear();
-    }
+    }*/
 }

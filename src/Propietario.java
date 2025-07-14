@@ -47,17 +47,17 @@ public class Propietario {
     /**
      * Conveniencia: muestra toda la ficha clínica completa.
      */
-    public void mostrarInformacionCompleta() {
+    /*public void mostrarInformacionCompleta() {
         System.out.println("===== FICHA CLÍNICA =====");
         mostrarInformacion();
         mostrarMascotas();
-    }
+    }*/
 
     // Getters y Setters refactorizados
 
-    public String getNombre() {
+    /*public String getNombre() {
         return nombre;
-    }
+    }*/
     public void setNombre(String nombre) {
         if (nombre == null || nombre.isBlank()) {
             throw new IllegalArgumentException("El nombre no puede estar vacío.");
@@ -65,9 +65,9 @@ public class Propietario {
         this.nombre = nombre;
     }
 
-    public String getDocumento() {
+    /*public String getDocumento() {
         return documento;
-    }
+    }*/
     public void setDocumento(String documento) {
         if (documento == null || documento.length() < 5) {
             throw new IllegalArgumentException("Documento inválido.");
@@ -75,9 +75,9 @@ public class Propietario {
         this.documento = documento;
     }
 
-    public String getTelefono() {
+    /*public String getTelefono() {
         return telefono;
-    }
+    }*/
     public void setTelefono(String telefono) {
         if (telefono == null || telefono.length() < 7) {
             throw new IllegalArgumentException("Teléfono inválido.");
@@ -85,7 +85,7 @@ public class Propietario {
         this.telefono = telefono;
     }
 
-    public List<Mascota> getMascotas() {
+    /*public List<Mascota> getMascotas() {
         return new ArrayList<>(mascotas);
-    }
+    }*/
 }

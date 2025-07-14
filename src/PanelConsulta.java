@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class PanelConsulta extends JInternalFrame {
 
-    private CrudMascotas crudMascotas;
+    CrudMascotas crudMascotas;
     private JTextArea areaResultado;
 
     public PanelConsulta(CrudMascotas crudMascotas) {
@@ -53,7 +53,7 @@ public class PanelConsulta extends JInternalFrame {
         add(panelCentral, BorderLayout.CENTER);
 
         // Acción del botón buscar
-        btnBuscar.addActionListener(e -> {
+        btnBuscar.addActionListener(_ -> {
             String nombreBuscado = txtNombre.getText().trim();
             if (nombreBuscado.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Escribe el nombre de la mascota.");

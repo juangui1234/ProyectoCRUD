@@ -26,7 +26,7 @@ public class FormularioPaciente extends JInternalFrame {
 
         JButton btnRegistrar = new JButton("Registrar");
 
-        btnRegistrar.addActionListener(e -> {
+        btnRegistrar.addActionListener(_ -> {
             String nombre = txtNombre.getText().trim();
             String especie = cbEspecie.getSelectedItem().toString();
             int edad = (int) spEdad.getValue();
